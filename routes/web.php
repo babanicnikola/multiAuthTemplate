@@ -27,6 +27,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
+Route::get('/admin/users', [AdminController::class, 'list'])->name('userslist');
+
 Auth::routes();
 
 
