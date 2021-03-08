@@ -8,7 +8,7 @@
                         <div class="col-sm-8"><h2>Users Details</h2></div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-success float-right">Add New</button>
+                <a href="{{ route('usernew') }}" class="btn btn-success float-right">Add New</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>

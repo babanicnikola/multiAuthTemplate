@@ -77,7 +77,7 @@
           
                   </nav>
 <!-- End of Topbar -->
-
+@include('admin.message')
 @yield('content')
 </div>
 <!-- End of Main Content -->

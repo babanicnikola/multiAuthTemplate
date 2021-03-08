@@ -17,22 +17,39 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
+
     public function list()
     {
-    $users = DB::table('users')->get();
+        $users = DB::table('users')->get();
         
-        return view('admin.users', compact('users'));
+        return view('admin.users.users', compact('users'));
     }
+
+    public function create(Request $request)
+    {
+        return view('admin.index');
+    }
+
+    public function store(Request $request)
+    {
+        return view('admin.index');
+    }
+
     public function view($user_id)
     {
         return view('admin.index');
     }
+
     public function edit($user_id)
     {
         return view('admin.index');
     }
+
     public function delete($user_id)
     {
-        return view('admin.index');
+        $post = User::findOrFail($user_id);
+        $post->delete($user_id); 
+          
+        return back()->with('success','User deleted successfully!');
     }
 }
