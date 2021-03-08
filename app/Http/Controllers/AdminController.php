@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -18,9 +19,20 @@ class AdminController extends Controller
     }
     public function list()
     {
-    $users = User::latest()->paginate(5);
-
-        return view('admin.users', compact('users'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+    $users = DB::table('users')->get();
+        
+        return view('admin.users', compact('users'));
+    }
+    public function view($user_id)
+    {
+        return view('admin.index');
+    }
+    public function edit($user_id)
+    {
+        return view('admin.index');
+    }
+    public function delete($user_id)
+    {
+        return view('admin.index');
     }
 }

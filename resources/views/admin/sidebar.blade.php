@@ -34,11 +34,11 @@
   <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-building"></i>
-          <span>Offices</span>
+          <span>Products</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="">Lorem Ipsum</a>
+            <a class="collapse-item" href="">Products List</a>
             <a class="collapse-item" href="">Add new lorem</a>
           </div>
         </div>
@@ -46,7 +46,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFinances" aria-expanded="true" aria-controls="collapseFinances">
           <i class="fas fa-fw fa-money-bill-alt"></i>
-          <span>Finances</span>
+          <span>Orders</span>
         </a>
         <div id="collapseFinances" class="collapse" aria-labelledby="headingFinances" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -59,7 +59,7 @@
       <li class="nav-item">
           <a class="nav-link" href="">
             <i class="fas fa-fw fa-calendar-alt"></i>
-            <span>Lorem</span></a>
+            <span>Messages</span></a>
       </li>
 <!-- Divider -->
             <hr class="sidebar-divider">

@@ -9,6 +9,7 @@
     <!-- Styles -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sb-admin-2.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     <script src="{!!url('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')!!}"></script>
     <!-- Custom style -->
@@ -85,7 +86,7 @@
 <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; workers.test 2020</span>
+            <span>Copyright &copy; BABANIC NIKOLA 2021</span>
           </div>
         </div>
       </footer>
