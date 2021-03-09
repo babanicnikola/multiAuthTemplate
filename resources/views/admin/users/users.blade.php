@@ -15,9 +15,11 @@
                             <th>User ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Email Verified</th>
-                            <th>Created at</th>
-                            <th>Updated at</i></th>
+                            <th>Role</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Post Code</i></th>
+                            <th>Phone</i></th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -26,9 +28,11 @@
                             <th>User ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Email Verified</th>
-                            <th>Created at</th>
-                            <th>Updated at</i></th>
+                            <th>Role</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Post Code</i></th>
+                            <th>Phone</i></th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>
@@ -45,13 +49,26 @@
                             {{ $post->email }} 
                         </td>
                         <td> 
-                            {{ $post->email_verified_at }} 
+                            <?php $off = DB::select('select role_id from role_user where user_id = '.$post->id); 
+                                if ($off[0]->role_id == 1) {
+                                    echo "Administrator";
+                                } else {
+                                    echo "User";
+                                }
+                            ?>
+                            
                         </td>
                         <td> 
-                            {{ $post->created_at }} 
+                            {{ $post->address }} 
                         </td>
                         <td> 
-                            {{ $post->updated_at }} 
+                            {{ $post->city }} 
+                        </td>
+                        <td> 
+                            {{ $post->post_code }} 
+                        </td>
+                        <td> 
+                            {{ $post->phone }} 
                         </td>
                         <td>
                             <a href="{{ route('userview', $post->id ) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
