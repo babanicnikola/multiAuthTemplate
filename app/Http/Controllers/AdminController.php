@@ -99,7 +99,8 @@ class AdminController extends Controller
     //Functions for products
     public function listProducts()
     {
-        return view('admin.products.products');
+        $products = DB::table('products')->get();
+        return view('admin.products.products', compact('products'));
     }
 
     public function createProduct(Request $request)

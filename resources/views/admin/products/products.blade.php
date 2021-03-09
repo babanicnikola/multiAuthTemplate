@@ -12,32 +12,115 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Product ID</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>Post Code</i></th>
-                            <th>Phone</i></th>
+                            <th>Slug</th>
+                            <th>Vehicle</th>
+                            <th>Season</th>
+                            <th>On Sale</th>
+                            <th>Price</i></th>
+                            <th>Width</i></th>
+                            <th>Height</th>
+                            <th>Radius</th>
+                            <th>Speed Index</th>
+                            <th>Weight</th>
+                            <th>Load</th>
+                            <th>Manufacturer</th>
+                            <th>Design</th>
+                            <th>Spec. Label</th>
+                            <th>EAN</th>
+                            <th>Country</th>
+                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>User ID</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>Post Code</i></th>
-                            <th>Phone</i></th>
+                            <th>Slug</th>
+                            <th>Vehicle</th>
+                            <th>Season</th>
+                            <th>On Sale</th>
+                            <th>Price</i></th>
+                            <th>Width</i></th>
+                            <th>Height</th>
+                            <th>Radius</th>
+                            <th>Speed Index</th>
+                            <th>Weight</th>
+                            <th>Load</th>
+                            <th>Manufacturer</th>
+                            <th>Design</th>
+                            <th>Spec. Label</th>
+                            <th>EAN</th>
+                            <th>Country</th>
+                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        
+                    @foreach ($products as $post)
+                        <tr>
+                        <td> 
+                            {{ $post->name }} 
+                        </td>
+                        <td> 
+                            {{ $post->slug }} 
+                        </td>
+                        <td> 
+                            {{ $post->vehicle }} 
+                        </td>
+                        <td> 
+                            {{ $post->season }} 
+                        </td>
+                        <td> 
+                            {{ $post->on_sale }} 
+                        </td>
+                        <td> 
+                            {{ $post->price }} 
+                        </td>
+                        <td> 
+                            {{ $post->width }} 
+                        </td>
+                        <td> 
+                            {{ $post->height }} 
+                        </td>
+                        <td> 
+                            {{ $post->radius }} 
+                        </td>
+                        <td> 
+                            {{ $post->speed_index }} 
+                        </td>
+                        <td> 
+                            {{ $post->weight }} 
+                        </td>
+                        <td> 
+                            {{ $post->load }} 
+                        </td>
+                        <td> 
+                            {{ $post->manufacturer }} 
+                        </td>
+                        <td> 
+                            {{ $post->design }} 
+                        </td>
+                        <td> 
+                            {{ $post->special_label }} 
+                        </td>
+                        <td> 
+                            {{ $post->ean }} 
+                        </td>
+                        <td> 
+                            {{ $post->country }} 
+                        </td>
+                        <td> 
+                            {{ $post->image_src }} 
+                        </td>
+                        <td>
+                            <a href="{{ route('userview', $post->id ) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="{{ route('useredit', $post->id ) }}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="{{ route('userdelete', $post->id ) }}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                        </tr>  
+                        @endforeach               
+                    </tbody>
                 </table>
                 
             </div>
