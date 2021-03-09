@@ -32,7 +32,7 @@
                             <label class="profileLabels" for="city">City:</label>
                             <input class="profileInputs" name="city" type="text"><br>
                             <label class="profileLabels" for="post_code">Post code:</label>
-                            <input class="profileInputs" name="post_code" type="text"><br>
+                            <input class="profileInputs" name="post_code" type="number"><br>
                             <label class="profileLabels" for="phone">Phone:</label>
                             <input class="profileInputs" name="phone" type="text"><br>
                             <br>

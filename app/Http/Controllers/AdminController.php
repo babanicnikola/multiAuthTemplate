@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -31,7 +32,7 @@ class AdminController extends Controller
         return view('admin.users.create');
     }
 
-    public function store(Request $request)
+    protected function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
@@ -43,16 +44,23 @@ class AdminController extends Controller
             'post_code',
             'phone'
         ]);
-        $user = new User();
-        $user->name = $request['name'];
-        $user->email = $request['email'];
-        $user->password = $request['password'];
-        $user->address = $request['address'];
-        $user->city = $request['city'];
-        $user->post_code = $request['post_code'];
-        $user->phone = $request['phone'];
-        $user->save();
-        DB::insert('insert into role_user values (?, ?, ?)', [$request->role_id, $user->id, 'App\User']);
+        $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'address' => $request['address'],
+            'city' => $request['city'],
+            'post_code' => $request['post_code'],
+            'phone' => $request['phone'],
+        ]);
+        if ($request->role_id == 2){
+            $user->attachRole('user');
+        } elseif ($request->role_id == 1) {
+            $user->attachRole('superadministrator');
+        }
+
+        
+        //DB::insert('insert into role_user values (?, ?, ?)', [$request->role_id, $user->id, 'App\User']);
         return back()->with('success','User added successfully!');
     }
 
@@ -69,7 +77,8 @@ class AdminController extends Controller
     public function delete($user_id)
     {
         $post = User::findOrFail($user_id);
-        $post->delete($user_id); 
+        $post->delete($user_id);
+        DB::table('role_user')->where('user_id', $user_id)->delete();
           
         return back()->with('success','User deleted successfully!');
     }
