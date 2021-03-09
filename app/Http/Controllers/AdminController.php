@@ -19,6 +19,9 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
+
+    //***************************************************************/
+
     //Functions for users
     public function list()
     {
@@ -59,8 +62,6 @@ class AdminController extends Controller
             $user->attachRole('superadministrator');
         }
 
-        
-        //DB::insert('insert into role_user values (?, ?, ?)', [$request->role_id, $user->id, 'App\User']);
         return back()->with('success','User added successfully!');
     }
 
@@ -84,6 +85,8 @@ class AdminController extends Controller
     }
     //Functions for users END
 
+    //***************************************************************/
+
     //Functions for users roles
     public function listroles()
     {
@@ -92,4 +95,35 @@ class AdminController extends Controller
         return view('admin.users.roles.roles', compact('roles'));
     }
     //Functions for users roles END
+
+    //Functions for products
+    public function listProducts()
+    {
+        return view('admin.products.products');
+    }
+
+    public function createProduct(Request $request)
+    {
+        
+    }
+
+    protected function storeProduct(Request $request)
+    {
+        return view('admin.products.products');
+    }
+
+    public function viewProduct($user_id)
+    {
+        return view('admin.products.products');
+    }
+
+    public function editProduct($user_id)
+    {
+        return view('admin.products.products');
+    }
+
+    public function deleteProduct($user_id)
+    {
+        return view('admin.products.products');
+    }
 }

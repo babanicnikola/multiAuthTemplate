@@ -35,9 +35,11 @@ Route::get('/admin/users/edit/{user_id}', [AdminController::class, 'edit'])->nam
 Route::get('/admin/users/delete/{user_id}', [AdminController::class, 'delete'])->name('userdelete');
 
 Route::get('/admin/users/roles', [AdminController::class, 'listroles'])->name('listroles');
-Route::get('/admin/users/roles/create', [AdminController::class, 'create'])->name('rolenew');
-Route::get('/admin/users/roles/view/{role_id}', [AdminController::class, 'view'])->name('roleview');
-Route::get('/admin/users/roles/edit/{role_id}', [AdminController::class, 'edit'])->name('roleedit');
-Route::get('/admin/users/roles/delete/{role_id}', [AdminController::class, 'delete'])->name('roledelete');
 
+Route::get('/admin/users/products', [AdminController::class, 'listProducts'])->name('listproducts');
+Route::get('/admin/users/products/create', [AdminController::class, 'createProduct'])->name('productnew');
+Route::put('/admin/users/products/store', [AdminController::class, 'storeProduct'])->name('productstore');
+Route::get('/admin/users/products/view/{product_id}', [AdminController::class, 'viewProduct'])->name('productview');
+Route::get('/admin/users/products/edit/{product_id}', [AdminController::class, 'editProduct'])->name('productedit');
+Route::get('/admin/users/products/delete/{product_id}', [AdminController::class, 'deleteProduct'])->name('productdelete');
 Auth::routes();

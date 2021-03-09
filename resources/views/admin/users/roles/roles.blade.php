@@ -8,22 +8,21 @@
                         <div class="col-sm-8"><h2>Roles Details</h2></div>
                     </div>
                 </div>
-                <a href="{{ route('rolenew') }}" class="btn btn-success float-right">Add New</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
+                            <th>Display name</th>
                             <th>Description</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
+                            <th>Display name</th>
                             <th>Description</th>
-                            <th>Actions</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -36,12 +35,10 @@
                             {{ $post->name }} 
                         </td>
                         <td> 
-                            {{ $post->description }} 
+                            {{ $post->display_name }} 
                         </td>
-                        <td>
-                            <a href="{{ route('roleview', $post->id ) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="{{ route('roleedit', $post->id ) }}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="{{ route('roledelete', $post->id ) }}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        <td> 
+                            {{ $post->description }} 
                         </td>
                         </tr>  
                         @endforeach               

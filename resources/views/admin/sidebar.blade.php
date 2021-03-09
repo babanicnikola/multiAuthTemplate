@@ -38,7 +38,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="">Products List</a>
+            <a class="collapse-item" href="{{ route('listproducts') }}">Products List</a>
             <a class="collapse-item" href="">Add new lorem</a>
           </div>
         </div>
