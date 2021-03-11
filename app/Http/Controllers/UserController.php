@@ -58,12 +58,12 @@ class UserController extends Controller
 
     public function view($user_id)
     {
-        return view('admin.index');
+        return view('admin.users.view');
     }
 
     public function edit($user_id)
     {
-        return view('admin.index');
+        return view('admin.users.edit');
     }
 
     public function delete($user_id)

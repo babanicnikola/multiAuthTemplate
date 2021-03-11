@@ -122,7 +122,8 @@
         </div>
       </div>
     </div>
-  </div><!-- Logout Modal END-->
+  </div>
+  <!-- Logout Modal END-->
 
   <!-- Bootstrap core JavaScript-->
   <script type="text/javascript" src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
@@ -140,7 +141,6 @@
 
   <!-- Page level custom scripts -->
   <script type="text/javascript" src="{{ asset('js/demo/datatables-demo.js') }}" defer></script>
-<!-- Page level plugins -->
 
 </body>
 

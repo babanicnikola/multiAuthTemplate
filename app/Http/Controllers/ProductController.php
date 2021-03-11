@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Products;
+use App\Product;
 
 class ProductController extends Controller
 {
@@ -55,7 +55,7 @@ class ProductController extends Controller
         
         //Image upload END
 
-        Products::create([
+        Product::create([
             'name' => $request['name'],
             'slug' => time(),
             'vehicle' => $request['vehicle'],

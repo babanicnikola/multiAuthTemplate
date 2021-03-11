@@ -7,7 +7,7 @@
         </div>
 
         <div class="row">
-          <!-- Salaries Card -->
+          <!-- Orders Card -->
           <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
               <div class="card-body">
@@ -24,7 +24,7 @@
             </div>
           </div>
 
-          <!-- Earnings Card Example -->
+          <!-- Messages Card -->
           <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
               <div class="card-body">
@@ -41,7 +41,7 @@
             </div>
           </div>
 
-          <!-- Number of offices Card -->
+          <!-- Products Card -->
           <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-info shadow h-100 py-2">
               <div class="card-body">
@@ -63,7 +63,7 @@
             </div>
           </div>
 
-          <!-- Total employees Card -->
+          <!-- Users Card -->
           <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
@@ -81,11 +81,10 @@
             </div>
           </div>
         </div>
+
       <!-- CHARTS -->
       <div class="row">
-
           <div class="col-xl-8 col-lg-7">
-
             <!-- Area Chart -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -97,7 +96,6 @@
                 </div>
               </div>
             </div>
-
           </div>
 
           <!-- Donut Chart -->
@@ -112,13 +110,13 @@
                 <div class="chart-pie pt-4">
                   <canvas id="myPieChart"></canvas>
                 </div>
-                
               </div>
             </div>
           </div>
-        </div>
+      </div>
       <!-- CHARTS END -->
       </div><!-- Container fluid END -->
+      
 <!-- Charts scripts -->
 <script type="text/javascript" src="{{ asset("vendor/chart.js/Chart.min.js") }}" defer></script>
 <script type="text/javascript" src="{{ asset("js/demo/chart-area-demo.js") }}" defer></script>

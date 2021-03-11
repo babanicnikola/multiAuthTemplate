@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Products extends Model
+class Product extends Model
 {
     protected $fillable = [
         'name', 'slug', 'vehicle', 'season', 'on_sale', 'price', 'width', 'height', 'radius', 'speed_index', 'weight', 'load', 'manufacturer', 'design', 'special_label', 'ean', 'country', 'image_src'
