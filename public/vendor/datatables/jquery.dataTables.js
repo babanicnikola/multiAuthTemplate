@@ -4189,7 +4189,7 @@
 				'id': ! features.f ? tableId+'_filter' : null,
 				'class': classes.sFilter
 			} )
-			.append( $('<label/>' ).append( str ) );
+			.append( $('<label/>' ).append( 'str' ) );
 	
 		var searchFn = function() {
 			/* Update all other filter input elements for the new display */

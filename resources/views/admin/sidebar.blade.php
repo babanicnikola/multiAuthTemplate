@@ -2,10 +2,7 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin') }}">
-      <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-calendar-alt"></i>
-      </div>
-      <div class="sidebar-brand-text mx-3">Administration</div>
+      <div class="sidebar-brand-text mx-3">Administracija</div>
     </a>
     
     <!-- Divider -->
@@ -15,19 +12,19 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('admin') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span>Kontrolna tabla</span></a>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-user"></i>
-        <span>Users</span>
+        <span>Korisnici</span>
       </a>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" href="{{ route('userslist') }}">Users list</a>
-          <a class="collapse-item" href="{{ route('listroles') }}">Roles</a>
+          <a class="collapse-item" href="{{ route('userslist') }}">Lista korisnika</a>
+          <a class="collapse-item" href="{{ route('listroles') }}">Uloge korisnika</a>
         </div>
       </div>
     </li>
@@ -35,14 +32,14 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('listproducts') }}">
         <i class="fas fa-fw fa-tasks"></i>
-        <span>Products</span>
+        <span>Proizvodi</span>
       </a>
     </li>
       
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFinances" aria-expanded="true" aria-controls="collapseFinances">
         <i class="fas fa-fw fa-cart-arrow-down"></i>
-        <span>Orders</span>
+        <span>Narudžbine</span>
       </a>
       <div id="collapseFinances" class="collapse" aria-labelledby="headingFinances" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
@@ -56,7 +53,7 @@
     <li class="nav-item">
       <a class="nav-link" href="">
         <i class="fas fa-fw fa-envelope"></i>
-        <span>Messages</span>
+        <span>Poruke</span>
       </a>
     </li>
 <!-- Divider -->
