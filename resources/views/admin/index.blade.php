@@ -17,7 +17,7 @@
                   <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                   </div>
                   <div class="col-auto">
-                    <i class="fas fa-money-bill-alt fa-2x text-gray-300"></i>
+                    <i class="fas fa-cart-plus fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -34,7 +34,7 @@
                     <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                   </div>
                   <div class="col-auto">
-                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    <i class="fas fa-envelope fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -60,7 +60,7 @@
                     </div>
                   </div>
                   <div class="col-auto">
-                    <i class="fas fa-building fa-2x text-gray-300"></i>
+                    <i class="fas fa-tasks fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@
                   <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $usersCount }}</div>
                   </div>
                   <div class="col-auto">
-                    <i class="fas fa-user-md fa-2x text-gray-300"></i>
+                    <i class="fas fa-user fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
