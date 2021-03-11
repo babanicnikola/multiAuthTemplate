@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Product;
+use Illuminate\Support\Facades\File;
+
 
 class ProductController extends Controller
 {
@@ -79,18 +81,23 @@ class ProductController extends Controller
         return back()->with('success','Product added successfully!');
     }
 
-    public function viewProduct($user_id)
+    public function viewProduct($product_id)
     {
-        return view('admin.products.products');
+        return view('admin.products.view');
     }
 
-    public function editProduct($user_id)
+    public function editProduct($product_id)
     {
-        return view('admin.products.products');
+        return view('admin.products.edit');
     }
 
-    public function deleteProduct($user_id)
+    public function deleteProduct($product_id)
     {
-        return view('admin.products.products');
+        $post = Product::findOrFail($product_id);
+        
+        File::delete(public_path('images/products/').$post['image_src']);
+        $post->delete($product_id);
+          
+        return back()->with('success','Proizvod uspešno obrisan!');
     }
 }

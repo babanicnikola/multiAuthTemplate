@@ -12,17 +12,17 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Display name</th>
-                            <th>Description</th>
+                            <th>Naziv</th>
+                            <th>Naziv na prikazu</th>
+                            <th>Opis</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Display name</th>
-                            <th>Description</th>
+                            <th>Naziv</th>
+                            <th>Naziv na prikazu</th>
+                            <th>Opis</th>
                         </tr>
                     </tfoot>
                     <tbody>

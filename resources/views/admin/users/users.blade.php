@@ -71,9 +71,9 @@
                             {{ $post->phone }} 
                         </td>
                         <td>
-                            <a href="{{ route('userview', $post->id ) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="{{ route('useredit', $post->id ) }}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="{{ route('userdelete', $post->id ) }}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href="{{ route('userview', $post->id ) }}" class="view" title="Pregledaj" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="{{ route('useredit', $post->id ) }}" class="edit" title="Izmeni" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="{{ route('userdelete', $post->id ) }}" class="delete" title="Obriši" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                         </tr>  
                         @endforeach               

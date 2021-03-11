@@ -53,7 +53,7 @@ class UserController extends Controller
             $user->attachRole('superadministrator');
         }
 
-        return back()->with('success','User added successfully!');
+        return back()->with('success','Korisnik uspešno dodat!');
     }
 
     public function view($user_id)
@@ -72,7 +72,7 @@ class UserController extends Controller
         $post->delete($user_id);
         DB::table('role_user')->where('user_id', $user_id)->delete();
           
-        return back()->with('success','User deleted successfully!');
+        return back()->with('success','Korisnik uspešno obrisan!');
     }
 
     //Functions for users roles

@@ -12,46 +12,46 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Vehicle</th>
-                            <th>Season</th>
-                            <th>On Sale</th>
-                            <th>Price</i></th>
-                            <th>Width</i></th>
-                            <th>Height</th>
-                            <th>Radius</th>
-                            <th>Speed Index</th>
-                            <th>Weight</th>
-                            <th>Load</th>
-                            <th>Manufacturer</th>
-                            <th>Design</th>
-                            <th>Spec. Label</th>
+                            <th>Naziv</th>
+                            <th>Tip vozila</th>
+                            <th>Sezona</th>
+                            <th>Na rasprodaji</th>
+                            <th>Cena</i></th>
+                            <th>Sirina</i></th>
+                            <th>Visina</th>
+                            <th>Precnik</th>
+                            <th>Index brzine</th>
+                            <th>Tezina</th>
+                            <th>Opterecenje</th>
+                            <th>Proizvodjac</th>
+                            <th>Dezen</th>
+                            <th>Spec. Oznaka</th>
                             <th>EAN</th>
-                            <th>Country</th>
-                            <th>Image</th>
-                            <th>Actions</th>
+                            <th>Zemlja porekla</th>
+                            <th>Slika</th>
+                            <th>Izmene</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Name</th>
-                            <th>Vehicle</th>
-                            <th>Season</th>
-                            <th>On Sale</th>
-                            <th>Price</i></th>
-                            <th>Width</i></th>
-                            <th>Height</th>
-                            <th>Radius</th>
-                            <th>Speed Index</th>
-                            <th>Weight</th>
-                            <th>Load</th>
-                            <th>Manufacturer</th>
-                            <th>Design</th>
-                            <th>Spec. Label</th>
+                            <th>Naziv</th>
+                            <th>Tip vozila</th>
+                            <th>Sezona</th>
+                            <th>Na rasprodaji</th>
+                            <th>Cena</i></th>
+                            <th>Sirina</i></th>
+                            <th>Visina</th>
+                            <th>Precnik</th>
+                            <th>Index brzine</th>
+                            <th>Tezina</th>
+                            <th>Opterecenje</th>
+                            <th>Proizvodjac</th>
+                            <th>Dezen</th>
+                            <th>Spec. Oznaka</th>
                             <th>EAN</th>
-                            <th>Country</th>
-                            <th>Image</th>
-                            <th>Actions</th>
+                            <th>Zemlja porekla</th>
+                            <th>Slika</th>
+                            <th>Izmene</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -111,9 +111,9 @@
                             <img src="{{ asset('images/products/'.$post->image_src) }}" alt="" height="70px" width="70px"> 
                         </td>
                         <td>
-                            <a href="{{ route('userview', $post->id ) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="{{ route('useredit', $post->id ) }}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="{{ route('userdelete', $post->id ) }}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href="{{ route('productview', $post->id ) }}" class="view" title="Pregledaj" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="{{ route('productedit', $post->id ) }}" class="edit" title="Izmeni" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="{{ route('productdelete', $post->id ) }}" class="delete" title="Obriši" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                         </tr>  
                         @endforeach               
