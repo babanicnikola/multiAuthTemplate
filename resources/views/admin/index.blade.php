@@ -47,10 +47,14 @@
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
+                    <?php 
+                      $products = \DB::table('products')->get();
+                      $productsCount = $products->count();
+                    ?>
                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Products</div>
                     <div class="row no-gutters align-items-center">
                       <div class="col-auto">
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">899</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $productsCount }}</div>
                       </div>
                       
                     </div>
@@ -68,7 +72,8 @@
             <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
-                  <div class="col mr-2"><?php 
+                  <div class="col mr-2">
+                  <?php 
                     $users = \DB::table('users')->get();
                     $usersCount = $users->count();
                   ?>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Products;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
@@ -105,12 +107,62 @@ class AdminController extends Controller
 
     public function createProduct(Request $request)
     {
-        
+        return view('admin.products.create');
     }
 
-    protected function storeProduct(Request $request)
+    public function storeProduct(Request $request)
     {
-        return view('admin.products.products');
+        $request->validate([
+            'name' => 'required',
+            'vehicle',
+            'season',
+            'on_sale',
+            'price',
+            'width',
+            'height',
+            'radius',
+            'speed_index',
+            'weight',
+            'load',
+            'manufacturer',
+            'design',
+            'special_label',
+            'ean',
+            'country',
+            'image_src',
+        ]);
+        
+        //Image upload
+        if ($request->image_src != '') {
+            $imageName = time().'.'.$request->image_src->extension();  
+            $request->image_src->move(public_path('images/products'), $imageName);
+        } else
+            $imageName = 'default.jpg';
+        
+        //Image upload END
+
+        Products::create([
+            'name' => $request['name'],
+            'slug' => time(),
+            'vehicle' => $request['vehicle'],
+            'season' => $request['season'],
+            'on_sale' => $request['on_sale'],
+            'price' => $request['price'],
+            'width' => $request['width'],
+            'height' => $request['height'],
+            'radius' => $request['radius'],
+            'speed_index' => $request['speed_index'],
+            'weight' => $request['weight'],
+            'load' => $request['load'],
+            'manufacturer' => $request['manufacturer'],
+            'design' => $request['design'],
+            'special_label' => $request['special_label'],
+            'ean' => $request['ean'],
+            'country' => $request['country'],
+            'image_src' => $imageName,
+        ]);
+
+        return back()->with('success','Product added successfully!');
     }
 
     public function viewProduct($user_id)

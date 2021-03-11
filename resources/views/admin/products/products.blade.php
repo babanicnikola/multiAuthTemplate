@@ -8,12 +8,11 @@
                         <div class="col-sm-8"><h2>Products Details</h2></div>
                     </div>
                 </div>
-                <a href="" class="btn btn-success float-right">Add New</a>
+                <a href="{{ Route('productnew') }}" class="btn btn-success float-right">Add New</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Slug</th>
                             <th>Vehicle</th>
                             <th>Season</th>
                             <th>On Sale</th>
@@ -36,7 +35,6 @@
                     <tfoot>
                         <tr>
                             <th>Name</th>
-                            <th>Slug</th>
                             <th>Vehicle</th>
                             <th>Season</th>
                             <th>On Sale</th>
@@ -63,17 +61,16 @@
                             {{ $post->name }} 
                         </td>
                         <td> 
-                            {{ $post->slug }} 
-                        </td>
-                        <td> 
                             {{ $post->vehicle }} 
                         </td>
                         <td> 
                             {{ $post->season }} 
                         </td>
-                        <td> 
-                            {{ $post->on_sale }} 
-                        </td>
+                        <?php if($post->on_sale == 1) {
+                            echo "<td style='background-color: green; font-size: 50px;'>&#10003;</td>";
+                        } else {
+                            echo "<td style='background-color: red'> </td>";
+                        }?>
                         <td> 
                             {{ $post->price }} 
                         </td>
@@ -110,8 +107,8 @@
                         <td> 
                             {{ $post->country }} 
                         </td>
-                        <td> 
-                            {{ $post->image_src }} 
+                        <td>
+                            <img src="{{ asset('images/products/'.$post->image_src) }}" alt="" height="70px" width="70px"> 
                         </td>
                         <td>
                             <a href="{{ route('userview', $post->id ) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
