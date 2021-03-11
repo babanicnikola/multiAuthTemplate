@@ -21,7 +21,7 @@
                             <input class="profileInputs" name="password" type="password" required><br>
                             <label class="profileLabels" for="role">Role:</label>
                             <select class="selectStyle" required name="role_id">
-                                <option value="">Choose Role</option>
+                                <option value="" disabled selected hidden>Choose Role</option>
                                 <?php $off = DB::select('select * from roles'); ?>
                                 @foreach ($off as $o)
                                     <option value={{$o->id}}>{{$o->display_name}}</option>  

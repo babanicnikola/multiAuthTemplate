@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,24 +23,29 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+/*Auth routes*/
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
-Route::get('/admin/users', [AdminController::class, 'list'])->name('userslist');
-Route::get('/admin/users/create', [AdminController::class, 'create'])->name('usernew');
-Route::put('/admin/users/store', [AdminController::class, 'store'])->name('userstore');
-Route::get('/admin/users/view/{user_id}', [AdminController::class, 'view'])->name('userview');
-Route::get('/admin/users/edit/{user_id}', [AdminController::class, 'edit'])->name('useredit');
-Route::get('/admin/users/delete/{user_id}', [AdminController::class, 'delete'])->name('userdelete');
+/*ADMIN ROUTES*/
+    /*Admin - Users*/
+Route::get('/admin/users', [UserController::class, 'list'])->name('userslist');
+Route::get('/admin/users/create', [UserController::class, 'create'])->name('usernew');
+Route::put('/admin/users/store', [UserController::class, 'store'])->name('userstore');
+Route::get('/admin/users/view/{user_id}', [UserController::class, 'view'])->name('userview');
+Route::get('/admin/users/edit/{user_id}', [UserController::class, 'edit'])->name('useredit');
+Route::get('/admin/users/delete/{user_id}', [UserController::class, 'delete'])->name('userdelete');
+    /*Users - Roles*/
+Route::get('/admin/users/roles', [UserController::class, 'listroles'])->name('listroles');
 
-Route::get('/admin/users/roles', [AdminController::class, 'listroles'])->name('listroles');
+    /*Admin - Products*/
+Route::get('/admin/products', [ProductController::class, 'listProducts'])->name('listproducts');
+Route::get('/admin/products/create', [ProductController::class, 'createProduct'])->name('productnew');
+Route::put('/admin/products/store', [ProductController::class, 'storeProduct'])->name('productstore');
+Route::get('/admin/products/view/{product_id}', [ProductController::class, 'viewProduct'])->name('productview');
+Route::get('/admin/products/edit/{product_id}', [ProductController::class, 'editProduct'])->name('productedit');
+Route::get('/admin/products/delete/{product_id}', [ProductController::class, 'deleteProduct'])->name('productdelete');
+/*ADMIN ROUTES */
 
-Route::get('/admin/users/products', [AdminController::class, 'listProducts'])->name('listproducts');
-Route::get('/admin/users/products/create', [AdminController::class, 'createProduct'])->name('productnew');
-Route::put('/admin/users/products/store', [AdminController::class, 'storeProduct'])->name('productstore');
-Route::get('/admin/users/products/view/{product_id}', [AdminController::class, 'viewProduct'])->name('productview');
-Route::get('/admin/users/products/edit/{product_id}', [AdminController::class, 'editProduct'])->name('productedit');
-Route::get('/admin/users/products/delete/{product_id}', [AdminController::class, 'deleteProduct'])->name('productdelete');
 Auth::routes();

@@ -18,15 +18,20 @@
 
                             <label class="profileLabels" for="vehicle">Vehicle:</label>
                             <select class="selectStyle" name="vehicle">
-                                <option value="">Choose Vehicle</option>
+                                <option value="" disabled selected hidden>Choose Vehicle</option>
                                 <option value="car">Car</option>
+                                <option value="truck">Truck</option>
+                                <option value="bike">Bike</option>
+                                <option value="bus">Bus</option>
+                                <option value="tractor">Tractor</option>
                             </select><br>
 
                             <label class="profileLabels" for="season">Season:</label>
                             <select class="selectStyle" name="season">
-                                <option value="">Choose season</option>
-                                <option value="winter">Winter</option>
+                                <option value="" disabled selected hidden>Choose season</option>
                                 <option value="summer">Summer</option>
+                                <option value="winter">Winter</option>
+                                <option value="all-season">All-season</option>
                             </select><br>
 
                             <label class="profileLabels" for="on_sale">On Sale:</label>
@@ -46,7 +51,7 @@
 
                             <label class="profileLabels" for="speed_index">Speed index:</label>
                             <select class="selectStyle" name="speed_index">
-                                <option value="">Choose Speed Index</option>
+                                <option value="" disabled selected hidden>Choose Speed Index</option>
                                 <option value="A1">A1	(5km/h)</option>
                                 <option value="A2">A2	(10km/h)</option>
                                 <option value="A3">A3	(15km/h)</option>
