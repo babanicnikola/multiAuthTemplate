@@ -5,25 +5,25 @@
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-8"><h2>Products Details</h2></div>
+                        <div class="col-sm-8"><h2>Proizvodi</h2></div>
                     </div>
                 </div>
-                <a href="{{ Route('productnew') }}" class="btn btn-success float-right">Add New</a>
+                <a href="{{ Route('productnew') }}" class="btn btn-success float-right">&#x2b; Dodaj proizvod</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Naziv</th>
                             <th>Tip vozila</th>
                             <th>Sezona</th>
-                            <th>Na rasprodaji</th>
+                            <th>Na akciji</th>
                             <th>Cena</i></th>
-                            <th>Sirina</i></th>
+                            <th>Širina</i></th>
                             <th>Visina</th>
-                            <th>Precnik</th>
+                            <th>Prečnik</th>
                             <th>Index brzine</th>
-                            <th>Tezina</th>
-                            <th>Opterecenje</th>
-                            <th>Proizvodjac</th>
+                            <th>Težina</th>
+                            <th>Opterećenje</th>
+                            <th>Proizvođač</th>
                             <th>Dezen</th>
                             <th>Spec. Oznaka</th>
                             <th>EAN</th>
@@ -37,15 +37,15 @@
                             <th>Naziv</th>
                             <th>Tip vozila</th>
                             <th>Sezona</th>
-                            <th>Na rasprodaji</th>
+                            <th>Na akciji</th>
                             <th>Cena</i></th>
-                            <th>Sirina</i></th>
+                            <th>Širina</i></th>
                             <th>Visina</th>
-                            <th>Precnik</th>
+                            <th>Prečnik</th>
                             <th>Index brzine</th>
-                            <th>Tezina</th>
-                            <th>Opterecenje</th>
-                            <th>Proizvodjac</th>
+                            <th>Težina</th>
+                            <th>Opterećenje</th>
+                            <th>Proizvođač</th>
                             <th>Dezen</th>
                             <th>Spec. Oznaka</th>
                             <th>EAN</th>

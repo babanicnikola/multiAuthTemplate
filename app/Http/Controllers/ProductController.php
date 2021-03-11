@@ -78,7 +78,7 @@ class ProductController extends Controller
             'image_src' => $imageName,
         ]);
 
-        return back()->with('success','Product added successfully!');
+        return back()->with('success','Proizvod uspešno dodat!');
     }
 
     public function viewProduct($product_id)
@@ -95,7 +95,10 @@ class ProductController extends Controller
     {
         $post = Product::findOrFail($product_id);
         
-        File::delete(public_path('images/products/').$post['image_src']);
+        if ($post['image_src'] != 'default.jpg') {
+            File::delete(public_path('images/products/').$post['image_src']);
+        }
+        
         $post->delete($product_id);
           
         return back()->with('success','Proizvod uspešno obrisan!');
