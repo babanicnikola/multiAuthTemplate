@@ -12,12 +12,12 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('role:user|superadministrator');
+        $this->middleware('role:superadministrator');
     }
     //Functions for products
     public function listProducts()
     {
-        $products = DB::table('products')->get();
+        $products = Product::get();
         return view('admin.products.products', compact('products'));
     }
 

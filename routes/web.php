@@ -30,14 +30,14 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 /*ADMIN ROUTES*/
     /*Admin - Users*/
-Route::get('/admin/users', [UserController::class, 'list'])->name('userslist');
-Route::get('/admin/users/create', [UserController::class, 'create'])->name('usernew');
-Route::put('/admin/users/store', [UserController::class, 'store'])->name('userstore');
-Route::get('/admin/users/view/{user_id}', [UserController::class, 'view'])->name('userview');
-Route::get('/admin/users/edit/{user_id}', [UserController::class, 'edit'])->name('useredit');
-Route::get('/admin/users/delete/{user_id}', [UserController::class, 'delete'])->name('userdelete');
+Route::get('/admin/users', [AdminController::class, 'list'])->name('userslist');
+Route::get('/admin/users/create', [AdminController::class, 'create'])->name('usernew');
+Route::put('/admin/users/store', [AdminController::class, 'store'])->name('userstore');
+Route::get('/admin/users/view/{user_id}', [AdminController::class, 'view'])->name('userview');
+Route::get('/admin/users/edit/{user_id}', [AdminController::class, 'edit'])->name('useredit');
+Route::get('/admin/users/delete/{user_id}', [AdminController::class, 'delete'])->name('userdelete');
     /*Users - Roles*/
-Route::get('/admin/users/roles', [UserController::class, 'listroles'])->name('listroles');
+Route::get('/admin/users/roles', [AdminController::class, 'listroles'])->name('listroles');
 
     /*Admin - Products*/
 Route::get('/admin/products', [ProductController::class, 'listProducts'])->name('listproducts');
