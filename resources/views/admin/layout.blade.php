@@ -74,7 +74,7 @@
 <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; 2021</span>
+            <span><img src="{{URL::asset('/images/logo.png')}}" alt="Pneubest Home" style="max-width: 200px; height: 55px; width: auto; display:inline-block;"></span>
           </div>
         </div>
       </footer>
@@ -95,13 +95,13 @@
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-body">Are you sure you want to logout?</div>
+        <div class="modal-body">Da li ste sigurni da zelite da se odjavite?</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Otkaži</button>
           <a class="btn btn-primary" href="{{ route('logout') }}"
                              onclick="event.preventDefault();
                                            document.getElementById('logout-form').submit();">
-                              {{ __('Logout') }}
+                              {{ __('Odjavi se') }}
                           </a>
 
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

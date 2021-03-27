@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mx-auto">
+    <div class="container mx-auto py-5">
         <div class="flex flex-wrap justify-center">
             <div class="w-full max-w-sm">
-                <div class="flex flex-col break-words bg-white border border-2 rounded shadow-md">
+                <div class="flex flex-col break-words bg-white border border-2 rounded shadow-md mt-5">
 
                     <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
                         {{ __('Registrujte se') }}

@@ -47,5 +47,3 @@ Route::get('/admin/products/view/{product_id}', [ProductController::class, 'view
 Route::get('/admin/products/edit/{product_id}', [ProductController::class, 'editProduct'])->name('productedit');
 Route::get('/admin/products/delete/{product_id}', [ProductController::class, 'deleteProduct'])->name('productdelete');
 /*ADMIN ROUTES */
-
-Auth::routes();

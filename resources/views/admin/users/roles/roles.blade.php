@@ -5,7 +5,7 @@
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-8"><h2>Roles Details</h2></div>
+                        <div class="col-sm-8"><h2>Uloge korisnika</h2></div>
                     </div>
                 </div>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
